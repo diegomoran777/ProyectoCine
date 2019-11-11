@@ -1,0 +1,32 @@
+.cardContainer
+{
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 7%;
+     width: 80vw;
+     height: 70vh;
+     overflow-y: auto;
+}
+
+@media screen and (max-width: 454px)
+{
+    .cardContainer
+    {
+         margin-left: auto;
+         margin-right: auto;
+         margin-top: 10%;
+         width: 80vw;
+         height: 70vh;
+         overflow-y: auto;
+    }
+}
+
+.cardStatus
+{
+    float:left;
+}
+
+.cardDate
+{
+    float:right;
+}

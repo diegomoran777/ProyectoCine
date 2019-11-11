@@ -1,0 +1,96 @@
+.totalTitle
+{
+	font-size: 55px;
+	margin: auto;
+	text-align: center;
+	margin-top: 4%;
+	color: black;
+}
+
+.totalAmount
+{
+	margin: auto;
+	text-align: center;
+	margin-top: 2%;
+	font-size: 30px;
+
+}
+
+.totalBadge
+{
+	margin: auto;
+	text-align: center;
+	width: 40%;
+	height: 50px
+	margin-top: 2%;
+	font-size: 30px;
+}
+
+.titlePayment
+{
+	font-size: 35px;
+	margin: auto;
+	text-align: center;
+	margin-top: 5%;
+	color: black;
+}
+
+#moneyB
+{
+	margin: auto;
+	text-align: center;
+	margin-top: 1.5%;
+
+}
+
+.cashButton
+{
+	width: 5%;
+	display:inline-block;
+	margin-top: 5%;
+	margin-left: 5%;
+	cursor: pointer;
+}
+
+.creditButton
+{
+	width: 5%;
+	display:inline-block;
+	margin-left: 10%;
+	cursor: pointer;
+}
+
+.moneyButtons
+{
+    margin-left: 40%;
+}
+
+.moneyInput
+{
+	margin-top: 2%;
+	margin-left: 43%;
+}
+
+.changeInput
+{
+	margin-top: 1%;
+	margin-left: 43%;
+}
+
+.sendDiv
+{
+	width: 100%;
+	text-align: center;
+	margin: auto;
+}
+
+#mainContent
+{
+    margin-bottom: 5%;
+}
+
+#payMethod
+{
+    position: absolute;
+    visibility: hidden;
+}

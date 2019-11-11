@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: header">
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body id="AnalyticsBody" class="bg-secondary">
+    <div th:replace="layout :: menu"></div>
+    <div th:replace="AdminNavBar :: AdminNav"></div>
+    <h1 style="text-align: center;margin-top: 5%;margin-bottom: 3%;font-size: 5vh;color: white;">Panel de Buissness Analitics </h1>
+    <div class="dropdown" style="width:100px;margin:auto;">
+        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Seleccionar un año
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/analytics_specific?year=2018">2018</a>
+            <a class="dropdown-item" href="/analytics_specific?year=2019">2019</a>
+            <a class="dropdown-item" href="/analytics_specific?year=2020">2020</a>
+        </div>
+    </div>
+    <!-- IR A ENLACE -->
+    <div class="dropdown" style="width:100px;margin:auto;margin-top:1%;">
+        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Seleccionar grafico
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#one">Ganancias venta presencial</a>
+            <a class="dropdown-item" href="#two">Ganancias venta  online</a>
+            <a class="dropdown-item" href="#three">Registro de Actividad Anual</a>
+            <a class="dropdown-item" href="#four">Monto total presencial</a>
+            <a class="dropdown-item" href="#five">Monto total online</a>
+            <a class="dropdown-item" href="#six">Tarifas</a>
+            <a class="dropdown-item" href="#seven">Porcentaje online</a>
+            <a class="dropdown-item" href="#eight">Porcentaje presencial</a>
+        </div>
+    </div>
+    <!-- GRAFICOS -->
+    <div style="height: 100%;width: 60vw;margin-left:auto;margin-right: auto;margin-bottom: 5%" >
+        <h3 style="text-align: center;margin-top: 5%;margin-bottom: 5%;font-size: 3vh;color: white;"><a name="one"></a>Ganancias venta presencial</h3>
+        <canvas class="" id="myChart" style="height: 65vh;width: 70vw;color:white"></canvas>
+        <h3 style="text-align: center;margin-top: 5%;margin-bottom: 5%;font-size: 3vh;color: white;"><a name="two"></a>Ganancias venta  online</h3>
+        <canvas id="myChart2" style="height: 65vh;width: 70vw;color:white"></canvas>
+        <h3 id="activityTitle" style="text-align: center;margin-top: 5%;margin-bottom: 5%;font-size: 3vh;color: white;"><a name="three"></a>Registro de Actividad Anual </h3>
+        <canvas id="myChart3" style="height: 65vh;width: 70vw;color:white"></canvas>
+        <!--diego -->
+        <h3 style="text-align: center;margin-top: 5%;margin-bottom: 5%;font-size: 3vh;color: white;"><a name="four"></a>Monto total presencial</h3>
+        <canvas id="myChart4" style="height: 65vh;width: 70vw;color:white"></canvas>
+        <h3 style="text-align: center;margin-top: 5%;margin-bottom: 5%;font-size: 3vh;color: white;"><a name="five"></a>Monto total Online</h3>
+        <canvas id="myChart5" style="height: 65vh;width: 70vw;color:white"></canvas>
+        <h3 style="text-align: center;margin-top: 5%;margin-bottom: 5%;font-size: 3vh;color: white;"><a name="six"></a>Tarifas</h3>
+        <canvas id="myChart6" style="height: 65vh;width: 70vw;color:white"></canvas>
+        <h3 style="text-align: center;margin-top: 5%;margin-bottom: 5%;font-size: 3vh;color: white;"><a name="seven"></a>Porcentaje online</h3>
+        <canvas id="myChart7" style="height: 65vh;width: 70vw;color:white"></canvas>
+        <h3 style="text-align: center;margin-top: 5%;margin-bottom: 5%;font-size: 3vh;color: white;"><a name="eight"></a>Porcentaje presencial</h3>
+        <canvas id="myChart8" style="height: 65vh;width: 70vw;color:white"></canvas>
+    </div>
+    <div th:replace="layout :: footer"></div>
+    <script th:inline="javascript">
+            document.getElementById("AnalyticsBody").onload= function(){
+            ContentList = [[${YearSales}]];
+            ContentMovements = [[${YearMovements}]];
+            LoadTotals();
+            LoadGraphics();
+        }
+    </script>
+</body>
+</html>

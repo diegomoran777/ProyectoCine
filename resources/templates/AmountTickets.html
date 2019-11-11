@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: header">
+<meta charset="UTF-8"/>
+<title>Vente presencial cantidad de entradas</title>
+</head>
+<body class="bg-secondary" id="AmountBody">
+	<div th:replace="layout :: menu"></div>
+	<!--Div contenedor de los botones para volver,registrar cliente e ir a la pagina de pago-->
+	<div id="panel" class="panel">
+    <button onclick="back()" class="btn btn-secondary btn-sm btnBack">Volver</button>
+    <button onclick="registerClient()" class="btn btn-secondary btn-sm btnRegisterClient">Registrar cliente</button>
+    <button onclick="pay()" class="btn btn-secondary btn-sm btnPay">Pagar</button>
+  </div>
+  <!--Contenedor de la tabla de categorias-->
+  <div id="containerTables" class="containerRate">
+  	<!--Tabla de categorias donde se pueden modificar la cantidad de entradas y percibir el total-->
+    <table class="table table-sm table-striped table-dark table-bordered table tableContainerRate">
+      <thead>
+        <tr>
+          <th scope="col">Categoria</th>
+          <th scope="col">Precio</th>
+          <th scope="col"  class="center">Menos</th>
+          <th scope="col"  class="center">Cantidad</th>
+          <th scope="col"  class="center">Mas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="category : ${categories}">
+          <input class="hideInput" th:id="${'input' + category.getRateName()}" th:value="${category.getValue()}"></input>
+          <td th:text="${category.getRateName()}"></td>
+          <td th:text="${'$' + category.getValue()}"></td>
+          <td  class="center">
+            <button th:onclick="${' minus(''' + category.getRateName() + ''');'}" class="btn btn-secondary ">-</button>
+          </td>
+          <td  class="center">
+            <label th:id="${category.getRateName()}" text="">0</label>
+          </td>
+          <td  class="center">
+            <button th:onclick="${'add(''' + category.getRateName() + ''');'}" class="btn btn-secondary ">+</button>
+          </td>
+        </tr>
+        <td id="total">TOTAL</td>
+        <td id="pesos" colspan="3">0</td>
+    </tbody>
+  </table>
+</div>
+<!--Permite ingresar el id del cliente para traer su informacion y guardar el id en la reserva-->
+<form id="formClient" class="formStyle" method="post" action="/buscarCliente_traerInfo">
+  <label class= "badge badge-dark location standardLabel" for="ClientDNI">DNI cliente</label><br/>
+  <input class="form-control form-control-sm col-md-6 location" type="text" name="clientDNI" placeholder="DNI cliente" value=""/><br/>
+  <input class="btn btn-secondary btn-sm btnSend" type="submit" name="send" value="Ingresar"/><br/>
+  <label class= "badge badge-info location standardLabel" th:if="${msj != null}">ID:</label><br/>
+  <label class= "labelClient location standardLabel" th:if="${msj != null}" th:text="${clientInfo.getClientNumber()}"></label><br/>
+  <label class= "badge badge-info labelIdClient location standardLabel" th:if="${msj != null}">NOMBRE:</label><br/>
+  <label class= "labelClient location standardLabel" th:if="${msj != null}" th:text="${clientInfo.getFullName()}"></label><br/>
+  <label class= "badge badge-info labelIdClient location standardLabel" th:if="${msj != null}">MAIL:</label><br/>
+  <label class= "labelClient location standardLabel" th:if="${msj != null}" th:text="${clientInfo.getEmail()}"></label><br/>
+  <label class= "badge badge-info labelIdClient location standardLabel" th:if="${msj != null}">DNI:</label><br/>
+  <label class= "labelClient location standardLabel" th:if="${msj != null}" th:text="${clientInfo.getDocumentNumber()}"></label>
+</form>
+  <!--Formulario para que se registre un cliente-->
+  <!--Es modal y contiene un css con animacion-->
+  <form id="formRegisterClient" class="formRegisteredClient fadeIn" method="post" action="/registrar_cliente">
+    <button id="closeFormBtn" class="buttonCloseAmount">x</button>
+    <strong>Registrar cliente</strong>
+    <label class= "badge badge-dark alignLabel standardLabel" for="Name">Nombre Completo</label>
+      <!--Contenedor del campo Nombre completo y su icono-->
+      <div class="input-group-prepend align">
+        <div class="input-group-text "><i class="fas fa-user"></i></div>  
+        <input id="completeName" class="form-control form-control-sm col-md-6" type="text" name="Name" placeholder="Nombre completo" autofocus=""/>
+      </div>
+      <label class= "badge badge-dark alignLabel standardLabel" for="Tel">Telefono</label>
+      <!--Contenedor del campo telefono y su icono-->
+      <div class="input-group-prepend align">
+        <div class="input-group-text"><i class="fas fa-phone"></i></div>  
+        <input class="form-control form-control-sm col-md-6" type="number" name="Tel" placeholder="Telefono" autofocus=""/>
+      </div>
+      <label class= "badge badge-dark alignLabel standardLabel" for="Email">Email</label>
+      <!--Contenedor del campo Email y su icono-->
+      <div class="input-group-prepend align">
+        <div class="input-group-text"><i class="fas fa-envelope-square"></i></div>  
+        <input id="email" class="form-control form-control-sm col-md-6" type="email" name="Email" placeholder="Email" autofocus=""/>
+      </div>
+      <label class= "badge badge-dark alignLabel standardLabel" for="Adress">Direccion</label>
+      <!--Contenedor del campo direccion y su icono-->
+      <div class="input-group-prepend align">
+        <div class="input-group-text"><i class="far fa-address-card"></i></div>  
+        <input id="" class="form-control form-control-sm col-md-6" type="text" name="Adress" placeholder="Direccion" autofocus=""/>
+      </div>
+      <label class= "badge badge-dark alignLabel standardLabel" for="Date">Fecha de nacimiento</label>
+      <!--Contenedor del campo fecha de nacimiento y su icono-->
+      <div class="input-group-prepend align">
+        <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>  
+        <input id="date" class="form-control form-control-sm col-md-6" type="date" name="Date" placeholder="Fecha de nacimiento" autofocus=""/>
+      </div>
+      <label class= "badge badge-dark alignLabel standardLabel" for="DNI">DNI</label>
+      <!--Contenedor del dni y su icono-->
+      <div class="input-group-prepend align">
+        <div class="input-group-text"><i class="fas fa-id-card-alt"></i></div>  
+        <input id="dni" class="form-control form-control-sm col-md-6" type="number" name="DNI" placeholder="DNI" autofocus=""/>
+      </div>
+      <!--Tag del boton submit con atributo id para javaScript y su correspondiente clase para estilo de bootstrap-->
+      <input type="submit" id="addClient" class="btn btn-secondary btn-sm btnSubmit" value="Enviar"/>
+  </form>
+<div th:replace="layout :: footer"></div>
+<script th:inline="javascript">
+         /*<![CDATA[*/
+        var contentList = /*[[${Content}]]*/ 'default';
+        var titleType = (contentList[0]);
+        var textContent = (contentList[1]);
+        //Variable que va a activar o desactivar el sweet alert, 1 activo, 0 inactivo
+        var showAlert = (contentList[2]);
+        const onOff = "1"; 
+         /*]]>*/
+         if(p3 == onOff){
+        	 swal({
+                 title: titleType,
+                 text: textContent,
+                 icon: "warning"
+               })
+               showAlert = "";
+         }
+    </script>
+</body>
+</html>

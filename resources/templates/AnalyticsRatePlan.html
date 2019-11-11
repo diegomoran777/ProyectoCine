@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: header">
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body class="bg-secondary" id="AnalyticsBody">
+<div th:replace="layout :: menu"></div>
+<div th:replace="AdminNavBar :: AdminNav"></div>
+<label id="rateYear" class="YearDate" th:text="${YearSales.get(0).getYear()}"></label>
+<!-- Panel de referencias -->
+<div class="panelReferences">
+<label class="badge badge-default badge-info">Tarifa promedio</label>
+<label class="badge badge-default badge-warning">Tarifa promedio objetivo</label>
+<label class="badge badge-default badge-danger">Tarifa sugerida</label>
+</div>
+<!-- Div que represeta el mes y contiene las tarifas -->
+<div style="width: 90vw;margin:auto;margin-top:8%; overflow-y:auto;height: 70vh;">
+    <div th:each="YearSale : ${YearSales}" class="monthsRatePlan" th:onclick="${' sendRate(''' + YearSale.getMonth() + ''');'}">
+        <label id="month" class="monthRatePlan" th:text="${YearSale.getMonth()}"></label><br/>
+        <label class="badge badge-default badge-info labelRatePlanA" th:text="${YearSale.getAverageRate()}"></label><br/>
+        <label class="badge badge-default badge-warning labelRatePlanAE" th:text="${YearSale.getExpectedRate()}"></label><br/>
+        <label id="suggested" class="badge badge-default badge-danger labelRatePlanS" th:text="${YearSale.getRateSuggested()}"></label>
+    </div>
+</div>
+<div th:replace="layout :: footer"></div>
+</body>
+</html>

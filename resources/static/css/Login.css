@@ -1,0 +1,39 @@
+.loginTitle{
+	text-shadow: 4px -1px 4px #000000;
+}
+#titleLogScreen
+{
+	margin: auto;
+	color: white;
+	width: 30%;
+}
+.formLogin{
+	box-shadow: 9px 3px 9px 2px #474e54;
+}
+.formGroup
+{
+	margin: auto;
+	margin-top: 4%;
+	width: 40%;
+}
+
+@media screen and (max-width: 740px)
+{
+  .formGroup
+  {
+    width:50%;
+  } 
+}
+
+@media screen and (max-width: 454px)
+{
+  .formGroup
+  {
+	width:74%;
+  }
+
+  #titleLogScreen
+  {
+    width: 50%;
+  } 
+}

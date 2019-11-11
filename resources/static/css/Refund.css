@@ -1,0 +1,331 @@
+.list-group{
+	float: left;
+}
+.h1Title{
+	color: white;
+	position: relative;
+    left: 13%;
+    opacity: 1;
+}
+#title{
+	margin:auto;
+}
+.tableRefund{
+	position: relative;
+	top: 0%;
+}
+.formAdmin{
+	margin: auto;
+    margin-top: 1%;
+    width: 29%;
+    height: 26vh;
+    background-color: #343a40;
+    box-shadow: 9px 3px 9px 2px #474e54;
+    opacity: 1;
+    pointer-events: auto;
+    display: none;
+    position: absolute;
+    left: 39%;
+    padding-left: 3%;
+    padding-right: 3%
+}
+.formAllBookings{
+	margin: auto;
+    margin-top: 1%;
+    width: 20%;
+    height: 15vh;
+    background-color: #343a40;
+    box-shadow: 9px 3px 9px 2px #474e54;
+    opacity: 1;
+    pointer-events: auto;
+    position: absolute;
+    left: 64%;
+    top: 24%;
+    display: none;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.formBookings{
+	margin: auto;
+    margin-top: 1%;
+    width: 20%;
+    height: 15vh;
+    background-color: #343a40;
+    box-shadow: 9px 3px 9px 2px #474e54;
+    opacity: 1;
+    pointer-events: auto;
+    position: absolute;
+    left: 64%;
+    top: 8.6%;
+    display: none;
+    padding-right: 1%;
+    padding-left: 1%;
+}
+.containerbookings{
+	margin: auto;
+    margin-top: 1%;
+    width: 51%;
+    height: 54vh;
+    background-color: #576067;
+    box-shadow: 9px 3px 9px 2px #474e54;
+    opacity: 1;
+    pointer-events: auto;
+    overflow-y: auto;
+    float: left;
+    position: relative;
+    left: 13%;
+}
+.closeFormBookings{
+    background-color: #343a40;
+    border:none;
+    width: 7%;
+    color: white;
+    position: relative;
+    left: 106%
+}
+.formClientModal{
+    width: 14%;
+    background-color: #3e444a;
+    height: 51vh;
+    float: left;
+    position: relative;
+    left: 22%;
+    margin-top: 1%;
+    box-shadow: 9px 3px 9px 2px #474e54;
+    display: none;
+    color: white;
+}
+.btnCloseFormModal{
+    background-color: #343a40;
+    border:none;
+    width: 14%;
+    color: white;
+    position: relative;
+    left: 86%;
+}
+.labelIdClientFirstModal{
+    position: relative;
+    left: 3%;
+}
+.inputIdClientModal{
+    position: relative;
+    left: 22%;
+}
+.btnSendModal{
+    position: absolute;
+    left: 22%;
+    top: 20%;
+}
+.labelIdClientModal{
+    position: relative;
+    left: 21%;
+    margin-bottom: 0%;
+}
+.bookingIdSent{
+    visibility: hidden;
+    position: absolute;
+}
+.btnRefund{
+	left: 80%;
+    position: absolute;
+    top: 57.7%;
+    left: 64%;
+    width: 4%;
+    box-shadow: 9px 3px 9px 2px #474e54;
+    height: 7.5vh;
+}
+.btnShowUpFormBookings{
+    left: 64%;
+    position: absolute;
+    top: 11.2%;
+    width: 4%;
+    box-shadow: 9px 3px 9px 2px #474e54;
+    display: block;
+    height: 15vh;
+}
+.btnShowUpFormAllBookings{
+    left: 80%;
+    position: absolute;
+    top: 26.7%;
+    left: 64%;
+    width: 4%;
+    box-shadow: 9px 3px 9px 2px #474e54;
+    display: block;
+    height: 15vh;
+    opacity: 1;
+    pointer-events: auto;
+}
+.btnConsultClient{
+    left: 80%;
+    position: absolute;
+    top: 42.2%;
+    left: 64%;
+    width: 4%;
+    box-shadow: 9px 3px 9px 2px #474e54;
+    height: 15vh;
+    opacity: 1;
+    pointer-events: auto;
+}
+.buttonClose{
+    background-color: #343a40;
+    border:none;
+    width: 10%;
+    color: white;
+    position: relative;
+    left: 95%;
+}
+.buttonClose:hover, .buttonCloseFormPass:hover, .buttonCloseFormAllBookings:hover, .btnCloseFormModal:hover{
+	color: white;
+	background-color: red;
+}
+.buttonCloseFormPass{
+    background-color: #343a40;
+    border:none;
+    width: 10%;
+    color: white;
+    position: relative;
+    left: 103%;
+}
+.buttonCloseFormAllBookings{
+    background-color: #343a40;
+    border:none;
+    width: 10%;
+    color: white;
+    position: relative;
+    left: 95%;
+}
+.btnFormBookings{
+    margin-top: 2%;
+}
+.btnFormAllBookings{
+    margin-top: 2%;   
+}
+.labelAdmin{
+	position: relative;
+    left: -12%;
+}
+.labelBooking{
+    position: absolute;
+    left: 4%;
+    top: 2%;
+}
+.labelAllBooking{
+    position: absolute;
+    left: 4%;
+}
+.labelAdminTwo{
+	position: relative;
+}
+.btnRe{
+	margin-top: 2%;
+}
+.btnExit{
+	margin-top: 2%;
+    margin-left: 1%;
+}
+.fadeIn{
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;	
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+	visibility: visible !important;	
+}
+@keyframes fadeIn {
+	0% {
+		transform: scale(0);
+		opacity: 0.0;		
+	}
+	60% {
+		transform: scale(1.1);	
+	}
+	80% {
+		transform: scale(0.9);
+		opacity: 1;	
+	}	
+	100% {
+		transform: scale(1);
+		opacity: 1;	
+	}		
+}
+@-webkit-keyframes fadeIn {
+	0% {
+		-webkit-transform: scale(0);
+		opacity: 0.0;		
+	}
+	60% {
+		-webkit-transform: scale(1.1);
+	}
+	80% {
+		-webkit-transform: scale(0.9);
+		opacity: 1;	
+	}	
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 1;	
+	}		
+}
+
+.stretchRight{
+    animation-name: stretchRight;
+    -webkit-animation-name: stretchRight;   
+
+    animation-duration: 1.5s;   
+    -webkit-animation-duration: 1.5s;
+
+    animation-timing-function: ease-out;    
+    -webkit-animation-timing-function: ease-out;    
+
+    transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;        
+}
+
+@keyframes stretchRight {
+    0% {
+        transform: scaleX(0.3);
+    }
+    40% {
+        transform: scaleX(1.02);
+    }
+    60% {
+        transform: scaleX(0.98);
+    }
+    80% {
+        transform: scaleX(1.01);
+    }
+    100% {
+        transform: scaleX(0.98);
+    }               
+    80% {
+        transform: scaleX(1.01);
+    }
+    100% {
+        transform: scaleX(1);
+    }                           
+}
+
+@-webkit-keyframes stretchRight {
+    0% {
+        -webkit-transform: scaleX(0.3);
+    }
+    40% {
+        -webkit-transform: scaleX(1.02);
+    }
+    60% {
+        -webkit-transform: scaleX(0.98);
+    }
+    80% {
+        -webkit-transform: scaleX(1.01);
+    }
+    100% {
+        -webkit-transform: scaleX(0.98);
+    }               
+    80% {
+        -webkit-transform: scaleX(1.01);
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+    }       
+}

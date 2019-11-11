@@ -1,0 +1,2 @@
+jdbc:sqlserver://181.239.145.84;databaseName=CINEDB
+jdbc:sqlserver://192.168.1.4;databaseName=CINEDB

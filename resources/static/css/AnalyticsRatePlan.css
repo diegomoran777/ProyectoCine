@@ -1,0 +1,47 @@
+.panelReferences{
+	margin: auto;
+    width: fit-content;
+    position: absolute;
+    top: 11%;
+    left: 37%;
+}
+.monthsRatePlan{
+	width: 25%;
+    background-color: #32383e;
+    height: 26vh;
+    border: 1px solid #cccccc7a;
+    float: left;
+    cursor: pointer;
+}
+.monthsRatePlan:hover{
+	background: #347ec7;
+}
+.monthsRatePlan:active{
+	background-color: #63abf3;
+}
+.monthRatePlan{
+	margin-left: 38%;
+	font-size: 136%;
+	font-weight: bold;
+	color: white;
+}
+.labelRatePlanA{
+	margin-left: 40%;
+	font-weight: bold;
+}
+.labelRatePlanAE{
+	margin-left: 40%;
+	font-weight: bold;
+}
+.labelRatePlanS{
+	margin-left: 40%;
+	font-weight: bold;
+}
+.YearDate{
+	color: white;
+    position: absolute;
+    left: 6%;
+    font-size: 213%;
+    text-shadow: 4px -1px 4px #000000;
+    top: 9%;
+}

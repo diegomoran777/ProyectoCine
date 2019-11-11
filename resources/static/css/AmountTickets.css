@@ -1,0 +1,247 @@
+.containerRate
+{
+	margin: auto;
+    margin-top: 1%;
+    width: 54%;
+    height: 68vh;
+    background-color: #576067;
+    box-shadow: 9px 3px 9px 2px #474e54;
+    float: left;
+    position: relative;
+    left: 15%;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.tableContainerRate
+{
+	position: relative;
+	top: 1%;
+}
+
+.formStyle
+{
+	width: 14%;
+    background-color: #3e444a;
+    height: 54vh;
+    float: left;
+    position: relative;
+    left: 17%;
+    margin-top: 1%;
+    box-shadow: 9px 3px 9px 2px #474e54;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.labelIdClient
+{
+    margin-bottom: 0%;
+}
+
+.labelClient
+{
+	font-size: 70%;
+}
+
+.location
+{
+    position: relative !important;
+    left: 22% !important;
+}
+
+.btnSend
+{
+	position: absolute;
+    left: 22%;
+    top: 19%;
+}
+
+strong
+{
+	margin-left: 3%;
+	position: relative;
+	top: 2%;
+}
+
+.panel
+{
+	margin: auto;
+	margin-top: 3%;
+	width: 70%;
+	background-color: #343a40;
+	height: 8vh;
+	box-shadow: 9px 3px 9px 2px #474e54;
+	opacity: ;
+	pointer-events: auto;
+}
+
+.standardLabel
+{
+	color: white;
+	font-weight: bold; 
+}
+
+#total
+{
+	font-size: 100%;
+	font-weight: bold;
+}
+
+#pesos
+{
+	border:none; 
+	font-weight: bold;
+}
+
+.center
+{
+	text-align: center;
+}
+
+.btnBack
+{
+	position: absolute;
+    left: 16%;
+    top: 7.5%;
+}
+
+.btnPay
+{
+	position: absolute;
+    left: 80%;
+    top: 7.5%;
+}
+
+.hideInput
+{
+	display: none;
+}
+
+.btnRegisterClient
+{
+	position: relative;
+	top: 16%;
+	left: 43%;
+}
+
+.formRegisteredClient
+{
+	margin: auto;
+    width: 32%;
+    background-color: #343a40;
+    border: 1px solid #8080805e;
+    border-radius: 4px;
+    box-shadow: 9px 3px 9px 2px #474e54c2;
+    display: none;
+    position: absolute;
+    left: 35%;
+    top: 4%;
+    height: 77vh;
+}
+
+.buttonCloseAmount
+{
+	display: block;
+    position: relative;
+    width: 10%;
+    left: 90%;
+    background-color: #343a40;
+    border:none;
+    color: white;
+}
+
+.buttonCloseAmount:hover
+{
+	color: white;
+	background-color: red;
+}
+
+.btnSubmit
+{
+	position: relative;
+    left: 28%;
+    margin-top: 3%;
+    margin-bottom: 7%;
+}
+
+.align
+{
+	width: 72%;
+    margin: auto;
+    position: relative;
+    left: 14%;
+}
+
+.alignLabel
+{
+	position: relative;
+    left: 27%;
+}
+
+strong
+{
+    color: white;
+    background-color: #343a40;
+    text-align: center;
+    display: block;
+    margin:0;
+    height: 6vh; 
+}
+
+.fadeIn
+{
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;	
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+	visibility: visible !important;	
+}
+
+@keyframes fadeIn
+{
+	0%
+	{
+		transform: scale(0);
+		opacity: 0.0;		
+	}
+	60%
+	{
+		transform: scale(1.1);	
+	}
+	80%
+	{
+		transform: scale(0.9);
+		opacity: 1;	
+	}	
+	100%
+	{
+		transform: scale(1);
+		opacity: 1;	
+	}		
+}
+
+@-webkit-keyframes fadeIn
+{
+	0%
+	{
+		-webkit-transform: scale(0);
+		opacity: 0.0;		
+	}
+	60%
+	{
+		-webkit-transform: scale(1.1);
+	}
+	80%
+	{
+		-webkit-transform: scale(0.9);
+		opacity: 1;	
+	}	
+	100%
+	{
+		-webkit-transform: scale(1);
+		opacity: 1;	
+	}		
+}
+}

@@ -1,0 +1,15 @@
+#CalendarTable
+{
+    width: 80vw;
+}
+
+#CalendarTable td
+{
+    heigth: 100px;
+}
+
+#AnalyticsBody
+{
+    heigth: 100%
+    ;width: 100%
+}
